@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 
-
 / {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
@@ -36,10 +35,10 @@
 //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
                         display-name = "Base";
                         bindings = <
-   AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
-   AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SQT)
-   AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  &kp LCTL  &kp RALT  AS(DOT)
-        &kp LGUI &mo 1 &kp SPACE     AS(RET) &mo 2  &kp BSPC
+   &as LS(Q) &as LS(W) &as LS(E) &as LS(R) &as LS(T)     A&as LS(Y)   &as LS(U)  &as LS(I)     &as LS(O)     &as LS(P)
+   &as LS(A) &as LS(S) &as LS(D) &as LS(F) &as LS(G)     &as LS(H)   &as LS(J)  &as LS(K)     &as LS(L)     &as LS(SQT)
+   &as LS(Z) &as LS(X) &as LS(C) &as LS(V) &as LS(B)     &as LS(N)   &as LS(M)  &kp LCTL  &kp RALT  &as LS(DOT)
+        &kp LGUI &mo 1 &kp SPACE     &as LS(RET) &mo 2  &kp BSPC
                         >;
                 };
 
@@ -67,10 +66,10 @@
                         display-name = "Raise";
                         bindings = <
 
-   AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)        AS(N6)    AS(N7)    AS(N8)    AS(N9)   AS(N0)
-   AS(MINUS) AS(EQUAL) &kp LBRC  &kp LBKT  &kp LPAR      &kp RPAR  &kp RBKT  &kp RBRC  AS(FSLH) AS(BSLH)
-   AS(GRAVE) &trans    &trans    AS(COMMA) &kp COLON     &kp SEMI  AS(DOT)   &kp LCTRL &kp RALT &trans
-                       &kp LGUI  &kp ESC   &kp SPACE     AS(RET)   &trans    &kp TAB
+   &as LS(N1)    &as LS(N2)    &as LS(N3)    &as LS(N4)    &as LS(N5)        &as LS(N6)    &as LS(N7)    &as LS(N8)    &as LS(N9)   &as LS(N0)
+   &as LS(MINUS) &as LS(EQUAL) &kp LBRC  &kp LBKT  &kp LPAR      &kp RPAR  &kp RBKT  &kp RBRC  &as LS(FSLH) &as LS(BSLH)
+   &as LS(GRAVE) &trans    &trans    &as LS(COMMA) &kp COLON     &kp SEMI  &as LS(DOT)   &kp LCTRL &kp RALT &trans
+                       &kp LGUI  &kp ESC   &kp SPACE     &as LS(RET)   &trans    &kp TAB
                         >;
                 };
 
