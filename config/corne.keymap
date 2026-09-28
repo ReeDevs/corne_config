@@ -76,7 +76,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < J L U Y ! M N E I O H , . / >; // List of keys on the right side of the keyboard
+            hold-trigger-key-positions = < J L U Y ! M N E I O H COMMA PERIOD FSLH >; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
         hmr: home_row_mod_right {
