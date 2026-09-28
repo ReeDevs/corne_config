@@ -101,25 +101,25 @@
         brkt: brkt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp [>, <&kp ]>;
+            bindings = <&kp LBKT>, <&kp RBKT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         crl: crl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp {>, <&kp }>;
+            bindings = <&kp LBRC>, <&kp RBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         undr: undr {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp _>, <&kp ->;
+            bindings = <&kp UNDER>, <&kp KP_MINUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         lns: lns {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp |>, <&kp \>;
+            bindings = <&kp PIPE>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
