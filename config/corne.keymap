@@ -189,21 +189,23 @@
                 extra_3 {
                         status = "reserved";
                 };
-        Nav {
-            bindings = <
-                &trans &trans &kp UP &trans &trans &trans &trans &trans &trans &trans
-                &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans
-                &wrkspc_1 &wrkspc_2 &wrkspc_3 &wrkspc_4 &wrkspc_5 &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans
-            >;
-        };
-        Settings {
-            bindings = <
-                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans
-            >;
-        };
+            nav {
+                    display-name = "Navigation";
+                    bindings = <
+                    &trans &trans &kp UP &trans &trans &trans &trans &trans &trans &trans
+                    &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans
+                    &wrkspc_1 &wrkspc_2 &wrkspc_3 &wrkspc_4 &wrkspc_5 &trans &trans &trans &trans &trans
+                    &trans &trans &trans &trans &trans &trans
+                    >;
+                };
+            settings {
+                    display-name = "Settings";
+                    bindings = <
+                    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR &trans &trans &trans &trans &trans
+                    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                    &trans &trans &trans &trans &trans &trans
+                    >;
+                };
         };
 };
