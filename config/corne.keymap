@@ -153,7 +153,7 @@
 // | BT1   | BT2 | BT3 | BT4 | BT5 |     | LFT | DWN |  UP | RGT |     |
 // | BTCLR |     |     |     |     |     |     |     |     |     |     |
 //               | GUI |     | SPC |     | ENT | ESC | TAB |
-                        display-name = "Lower";
+                        display-name = "Symbols";
                         bindings = <
    &trans     &trans       &trans     &trans     &trans        &kp GRAVE &kp EQUAL  &lns &kp LPAR  &kp SEMI
    &trans &trans &trans &trans &trans     &trans  &undr  &brkt          &crl &kp SQT 
@@ -168,7 +168,7 @@
 // | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
 // | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
 //            | GUI | ESC | SPC |     | ENT |     | TAB |
-                        display-name = "Raise";
+                        display-name = "Numbers";
                         bindings = <
 
    &trans    &kp N7    &kp N8    &kp N9    &trans        &trans    &trans    &trans    &trans   &trans
@@ -178,17 +178,6 @@
                         >;
                 };
 
-                extra_1 {
-                        status = "reserved";
-                };
-
-                extra_2 {
-                        status = "reserved";
-                };
-
-                extra_3 {
-                        status = "reserved";
-                };
             nav {
                     display-name = "Navigation";
                     bindings = <
@@ -198,6 +187,7 @@
                     &trans &trans &trans &trans &trans &trans
                     >;
                 };
+
             settings {
                     display-name = "Settings";
                     bindings = <
