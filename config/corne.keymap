@@ -21,51 +21,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        wrkspc_1: wrkspc_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT &kp LCTRL>
-                , <&macro_tap &kp 1>
-                , <&macro_release &kp LSHFT &kp LCTRL>
-                ;
-        };
-        wrkspc_2: wrkspc_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT &kp LCTRL>
-                , <&macro_tap &kp 1>
-                , <&macro_release &kp LSHFT &kp LCTRL>
-                ;
-        };
-        wrkspc_3: wrkspc_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT &kp LCTRL>
-                , <&macro_tap &kp 3>
-                , <&macro_release &kp LSHFT &kp LCTRL>
-                ;
-        };
-        wrkspc_4: wrkspc_4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT &kp LCTRL>
-                , <&macro_tap &kp 4>
-                , <&macro_release &kp LSHFT &kp LCTRL>
-                ;
-        };
-        wrkspc_5: wrkspc_5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT &kp LCTRL>
-                , <&macro_tap &kp 5>
-                , <&macro_release &kp LSHFT &kp LCTRL>
-                ;
-        };
+        
  };
     behaviors {
         hml: home_row_mod_left {
@@ -183,7 +139,7 @@
                     bindings = <
                     &trans &trans &kp UP &trans &trans &trans &trans &trans &trans &trans
                     &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans
-                    &wrkspc_1 &wrkspc_2 &wrkspc_3 &wrkspc_4 &wrkspc_5 &trans &trans &trans &trans &trans
+                    &kp LC(LS(N1)) &kp LC(LS(N2)) &kp LC(LS(N3)) &kp LC(LS(N4)) &kp LC(LS(N5)) &trans &trans &trans &trans &trans
                     &trans &trans &trans &trans &trans &trans
                     >;
                 };
