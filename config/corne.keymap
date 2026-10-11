@@ -78,6 +78,12 @@
             bindings = <&kp PIPE>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        par: par {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     chosen {
@@ -105,13 +111,13 @@
 
                 symbols {
 // -----------------------------------------------------------------------------------------
-// | !     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
-// | BT1   | BT2 | BT3 | BT4 | BT5 |     | LFT | DWN |  UP | RGT |     |
-// | BTCLR |     |     |     |     |     |     |     |     |     |     |
-//               | GUI |     | SPC |     | ENT | ESC | TAB |
+// |     |     |     |     |     |     |  ^  |  &  |  *  |  (  |  ;  |
+// |     |     |     |     |     |     |  _  |  [  |  [  |  {  |  '  |
+// |     |     |     |     |     |     |     |     |     |     |     |
+//               |     |     |     |     |     |     |     |
                         display-name = "Symbols";
                         bindings = <
-   &trans     &trans       &trans     &trans     &trans        &kp GRAVE &kp EQUAL  &lns &kp LPAR  &kp SEMI
+   &trans     &trans       &trans     &trans     &trans        &kp GRAVE &kp EQUAL  &lns &par  &kp SEMI
    &trans &trans &trans &trans &trans     &trans  &undr  &brkt          &crl &kp SQT 
    &trans   &trans       &trans       &trans       &trans           &trans    &trans    &kp LT          &kp GT    &kp FSLH 
                              &trans     &trans       &trans        &trans   &trans   &trans
@@ -122,7 +128,7 @@
 // -----------------------------------------------------------------------------------------
 // | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
 // | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
-// | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
+// |     |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
 //            | GUI | ESC | SPC |     | ENT |     | TAB |
                         display-name = "Numbers";
                         bindings = <
