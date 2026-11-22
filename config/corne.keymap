@@ -118,7 +118,7 @@
                         display-name = "Symbols";
                         bindings = <
    &kp GRAVE    &kp EQUAL    &lns    &par    &kp SEMI              &trans    &trans    &trans    &trans    &trans
-   &kp SQT      &crl         &brkt   &under  &trans                &trans    &trans    &trans    &trans    &trans
+   &kp SQT      &crl         &brkt   &undr  &trans                &trans    &trans    &trans    &trans    &trans
    &trans       &trans       &trans  &trans  &trans                &trans    &trans    &trans    &trans    &trans 
                              &trans     &trans    &trans           &trans   &trans   &trans
                         >;
