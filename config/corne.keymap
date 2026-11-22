@@ -32,7 +32,7 @@
             tapping-term-ms = <180>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < J L U Y EXCLAMATION M N E I O H COMMA PERIOD FSLH >; // List of keys on the right side of the keyboard
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
         hmr: home_row_mod_right {
@@ -43,7 +43,7 @@
             tapping-term-ms = <180>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < Q W F P B A R S T G Z X C D V >; // List of keys on the left side of the keyboard
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
         KHT: KHT {
@@ -96,67 +96,79 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  F  |  P  |  B  |     |  J  |  L   |  U   |  Y   | Z |
+// |  Q  |  W  |  F  |  P  |  B  |     |  J  |  L   |  U   |  Y   | ! |
 // |  A  |  R  |  S  |  T  |  G  |     |  M  |  N   |  E   |  I   | O | 
-// |  Z  |  X  |  C  |  D  |  V  |     |  K  |  H   | CTRL | META | . |
-//             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
+// |  Z  |  X  |  C  |  D  |  V  |     |  K  |  H   |  ,   |  .   | / |
+//             | SUPR | TAB | BSPC |     | SPC | ENTR  | SPCL |
                         display-name = "Base";
                         bindings = <
-   &kp Q &kp W &kp F &kp P &kp B     &kp J   &kp L  &kp U     &kp Y     &kp EXCL
-   &hml LCTRL A &hml LALT R &hml LGUI S &hml LSHFT T &KHT CAPS G     &KHT CAPS M   &hmr LSHFT N  &hmr LGUI E     &hmr LALT I     &hmr LCTRL O
+   &kp Q        &kp W    &kp F    &kp P    &kp B         &kp J    &kp L    &kp U    &kp Y    &kp EXCL
+   &hml LCTRL A &hml LALT R &hml LGUI S &hml LSHFT T &hml CAPS G     &hmr CAPS M   &hmr LSHFT N  &hmr LGUI E     &hmr LALT I     &hmr LCTRL O
    &kp Z &kp X &kp C &kp D &kp V     &kp K   &kp H  &kp COMMA  &kp DOT  &kp FSLH
-        &kp LG(LC(LA(LSHIFT))) &lt 3 TAB &lt 2 BSPC     &lt 1 SPACE &lt 4 ENTER  &cmdspc
+        &kp LG(LC(LA(LSHIFT))) &lt 4 TAB &lt 1 BSPC     &lt 2 SPACE &lt 3 ENTER  &cmdspc
                         >;
                 };
 
                 symbols {
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |  ^  |  &  |  *  |  (  |  ;  |
-// |     |     |     |     |     |     |  _  |  [  |  [  |  {  |  '  |
+// |  ^  |  &  |  *  |  (  |  ;  |     |     |     |     |     |     |
+// |  '  |  {  |  [  |  _  |  [  |     |     |     |     |     |     |
 // |     |     |     |     |     |     |     |     |     |     |     |
 //               |     |     |     |     |     |     |     |
                         display-name = "Symbols";
                         bindings = <
-   &trans     &trans       &trans     &trans     &trans        &kp GRAVE &kp EQUAL  &lns &par  &kp SEMI
-   &trans &trans &trans &trans &trans     &trans  &undr  &brkt          &crl &kp SQT 
-   &trans   &trans       &trans       &trans       &trans           &trans    &trans    &kp LT          &kp GT    &kp FSLH 
-                             &trans     &trans       &trans        &trans   &trans   &trans
+   &kp GRAVE    &kp EQUAL    &lns    &par    &kp SEMI              &trans    &trans    &trans    &trans    &trans
+   &kp SQT      &crl         &brkt   &under  &trans                &trans    &trans    &trans    &trans    &trans
+   &trans       &trans       &trans  &trans  &trans                &trans    &trans    &trans    &trans    &trans 
+                             &trans     &trans    &trans           &trans   &trans   &trans
                         >;
                 };
 
                 numbers {
 // -----------------------------------------------------------------------------------------
-// | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
-// | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
-// |     |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
-//            | GUI | ESC | SPC |     | ENT |     | TAB |
+// |     |     |     |     |     |     |     |  7  |  8  |  9  |     |
+// |     |     |     |     |     |     |     |  4  |  5  |  6  |     |
+// |     |     |     |     |     |     |  0  |  1  |  2  |  3  |     |
+//             |     |     |     |     |     |     |     |
                         display-name = "Numbers";
                         bindings = <
 
-   &trans    &kp N7    &kp N8    &kp N9    &trans        &trans    &trans    &trans    &trans   &trans
-   &kp DOT &kp N4 &kp N5  &kp N6  &trans      &trans  &trans  &trans  &trans &trans
-   &kp N0 &kp N1    &kp N2    &kp N3 &trans     &trans  &trans   &trans &trans &trans
-                       &trans  &trans   &trans     &trans   &trans    &trans
+   &trans    &trans    &trans    &trans    &trans        &trans    &kp N7    &kp N8    &kp N9   &trans
+   &trans    &trans    &trans    &trans    &trans        &trans    &kp N4    &kp N5    &kp N6   &trans
+   &trans    &trans    &trans    &trans    &trans        &kp N0    &kp N1    &kp N2    &kp N3   &trans
+                       &trans  &trans   &trans           &trans   &trans    &trans
                         >;
                 };
 
             nav {
+// -----------------------------------------------------------------------------------------
+// |     |     |     |     |     |     |       |       |       |       |       |
+// |     |     |     |     |     |     |       |  lft  |  dwn  |  up   | rght  |
+// |     |     |     |     |     |     |wrksp 1|wrksp 2|wrksp 3|wrksp 4|wrksp 5|
+//             |     |     |     |     |       |       |       |
                     display-name = "Navigation";
                     bindings = <
-                    &trans &trans &kp UP &trans &trans &trans &trans &trans &trans &trans
-                    &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans
-                    &kp LC(LS(N1)) &kp LC(LS(N2)) &kp LC(LS(N3)) &kp LC(LS(N4)) &kp LC(LS(N5)) &trans &trans &trans &trans &trans
-                    &trans &trans &trans &trans &trans &trans
+
+   &trans &trans &kp UP &trans &trans                          &trans    &trans    &trans    &trans    &trans
+   &trans &trans &trans &trans &trans                          &trans    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
+   &trans    &trans    &trans    &trans    &trans              &kp LC(LS(N1)) &kp LC(LS(N2)) &kp LC(LS(N3)) &kp LC(LS(N4)) &kp LC(LS(N5))
+   &trans &trans &trans                                        &trans    &trans    &trans
                     >;
                 };
 
             settings {
+// -----------------------------------------------------------------------------------------
+// |  bt 0   |  bt 1  |   bt 2  |   bt 3  |  bt clr   |     |     |     |     |     |     |
+// |         |        |         |         |           |     |     |     |     |     |     |
+// |         |        |         |         |           |     |     |     |     |     |     |
+//             |     |     |     |     |     |     |     |
                     display-name = "Settings";
                     bindings = <
-                    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR &trans &trans &trans &trans &trans
-                    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                    &trans &trans &trans &trans &trans &trans
+
+   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR     &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans                                 &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans                                 &trans &trans &trans &trans &trans
+   &trans &trans &trans                                               &trans &trans &trans
                     >;
                 };
         };
