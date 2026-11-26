@@ -178,7 +178,7 @@
 
             settings {
 // -----------------------------------------------------------------------------------------
-// |  bt 0   |  bt 1  |   bt 2  |   bt 3  |  bt clr   |     |     |     |     |     |     |
+// |  bt 0   |  bt 1  |   bt 2  |   bt 3  |  bt clr    |     |     |     |     |      |
 // |         |        |         |         |           |     |     |     |     |     |     |
 // |         |        |         |         |           |     |     |     |     |     |     |
 //             |     |     |     |     |     |     |     |
@@ -188,7 +188,23 @@
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR     &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans                                 &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans                                 &trans &trans &trans &trans &trans
-   &trans &trans &trans                                               &trans &trans &trans
+   &trans &trans &trans                                               &trans &to 5 &trans
+                    >;
+                };
+
+            gamedev {
+// -----------------------------------------------------------------------------------------
+// |  TAB  |  Q  |  W  |  E  |  R  |     |  ESC  |     |     |     |  F8  |
+// |  SHFT |  A  |  S  |  D  |  F  |     |     |     |     |     |     |
+// |  CTRL |  Z  |  X  |  C  |  V  |     |     |     |     |     |     |
+//             |     |     |     |     |     |     |     |
+                    display-name = "GameDev";
+                    bindings = <
+
+   &kp TAB      &kp Q    &kp W    &kp E    &kp R     &KP ESC &trans &trans &trans &KP F8
+   &kp LSHFT    &kp A    &kp S    &kp D    &kp F     &trans  &trans &trans &trans &trans
+   &kp LCTL     &kp Z    &kp X    &kp C    &kp V     &trans  &trans &trans &trans &trans
+   &trans &trans &kp SPACE                                               &trans &to 0 &trans
                     >;
                 };
         };
